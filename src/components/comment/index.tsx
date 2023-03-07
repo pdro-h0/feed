@@ -1,11 +1,32 @@
 import { TbThumbUp, TbTrash } from "react-icons/tb";
 import { Avatar } from "../Avatar";
 import * as C from "./styles";
+import { useState } from "react";
 
-export const Comment = () => {
+type CommentProps={
+  content: string,
+  deleteComment:(arg0: string)=>void
+}
+
+export const Comment = ({ content,deleteComment  }:CommentProps) => {
+  const handleDeleteComment = ()=>{
+    deleteComment(content)
+  }
+
+  const [likeCount, setLikeCount] = useState<number>(0)
+
+
+  const handleLikeButton = ()=>{
+    setLikeCount(likeCount + 1)
+  }
+
   return (
     <C.Container>
-      <Avatar hasBorder={false} src="https://github.com/pdro-h0.png" alt="Foto do Perfil"/>
+      <Avatar 
+      hasBorder={false} 
+      src="https://github.com/pdro-h0.png" 
+      alt="Foto do Perfil"
+      />
 
       <C.CommentBox>
         <C.CommentContent>
@@ -18,18 +39,18 @@ export const Comment = () => {
               >Cerca de 2h atrás</time>
             </C.AuthorAndTime>
 
-            <button title="deletar comentario">
+            <button onClick={handleDeleteComment} title="deletar comentario">
               <TbTrash size={24} />
             </button>
           </header>
 
-          <p>Lorem ipsum dolor sit!!👏👏</p>
+          <p>{content}</p>
         </C.CommentContent>
 
         <C.Footer>
-          <button>
+          <button onClick={handleLikeButton}>
             <TbThumbUp size={19}/>
-            Aplaudir <span>35</span>
+            Aplaudir <span>{likeCount}</span>
           </button>
         </C.Footer>
       </C.CommentBox>

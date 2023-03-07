@@ -1,13 +1,13 @@
 import * as C from './styles'
+import { ImgHTMLAttributes } from 'react'
 
-type AvatarProps={
-    src: string
-    alt: string
+interface AvatarProps extends  ImgHTMLAttributes<HTMLImageElement>{
     hasBorder?: boolean
 }
 
-export const Avatar = ({ src, alt, hasBorder = true }:AvatarProps)=>{
+export const Avatar = ({ hasBorder = true, ...props }:AvatarProps)=>{
     return(
-        <C.Container hasBorder={hasBorder} src={src} alt={alt}/>
+        <C.Container hasBorder={hasBorder} 
+        {...props}/>
     )
 }

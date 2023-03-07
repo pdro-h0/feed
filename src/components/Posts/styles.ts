@@ -125,8 +125,15 @@ export const Form = styled.form`
 
       transition: all ease 0.1s;
 
-      &:hover {
+      &:not(:disabled):hover {
         background-color: var(--green-300);
+      }
+
+      &:disabled{
+        background-color: var(--red-500);
+        opacity: 0.7;
+
+        cursor: not-allowed;
       }
     }
   }
