@@ -8,7 +8,7 @@ const posts =[
   {
     id: 1,
     author:{
-      avatarUrl: 'https://github.com/pdro-h0.png',
+      avatarUrl: 'https://github.com/maykbrito.png',
       name: 'Pedro Henrique',
       role: 'Front-End',
     },
@@ -22,7 +22,7 @@ const posts =[
   {
     id: 2,
     author:{
-      avatarUrl: 'https://github.com/maykbrito.png',
+      avatarUrl: 'https://github.com/pdro-h0.png',
       name: 'Mayk Brito',
       role: 'RocketSeat',
     },
