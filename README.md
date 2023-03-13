@@ -34,7 +34,7 @@ Projeto feito para imitar um feed.
 ## Instruções
 ### Primeiros passos:
 
-Depois de baixar o arquivo no [GitHub](https://github.com/ThomasDixini/Teste-Wls.git) no seu terminal, execute o seguinte comando na pasta raiz:
+Depois de baixar o arquivo no [GitHub](https://github.com/pdro-h0/feed.git) no seu terminal, execute o seguinte comando na pasta raiz:
 
 `npm install`
 
